@@ -77,14 +77,15 @@ $ randomness=$( \
     gtr -dc 'A-Za-z0-9!%()+,-:<=>?@[\]^_`{|}~' \
     < /dev/urandom | head -c 512)
 
-$ gpg2 --encrypt -r naftuli.kay \
+$ echo "$randomness" | gpg2 --armor --encrypt
+                -r naftuli.kay \
                 -r joshua.lai  \
                 -r slava.maslennikov \
             -o bin/vault_passphrase.gpg
 ```
 
 ---
-## Upload to your local VCS
+## Upload to a VCS near you
 
 ```bash
 $ git add bin/vault_passphrase.gpg
@@ -119,3 +120,8 @@ Pizza is delicious and tasty
 ## Thank you!
 
 Don't forget to present pizza to your local ISRE team!
+
+---
+## Congratulations Serge!
+
+---

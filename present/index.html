@@ -99,14 +99,15 @@ sub   rsa4096 2016-06-06 [A]
     gtr -dc 'A-Za-z0-9!%()+,-:<=>?@[\]^_`{|}~' \
     < /dev/urandom | head -c 512)
 
-$ gpg2 --encrypt -r naftuli.kay \
+$ echo "$randomness" | gpg2 --armor --encrypt
+                -r naftuli.kay \
                 -r joshua.lai  \
                 -r slava.maslennikov \
             -o bin/vault_passphrase.gpg
 </code></pre></div>
       <div class='step' >
     
-<h2>Upload to your local VCS</h2>
+<h2>Upload to a VCS near you</h2>
 <pre><code class='prettyprint bash'>$ git add bin/vault_passphrase.gpg
 $ git commit -m "Pizza has arrived! But don't tell anyone"
 $ git push origin pizza_days
@@ -140,7 +141,13 @@ Pizza is delicious and tasty
 <h2>Thank you!</h2>
 
 <p>Don&#39;t forget to present pizza to your local ISRE team!</p>
-
+</div>
+      <div class='step' >
+    
+<h2>Congratulations Serge!</h2>
+</div>
+      <div class='step' >
+    
       </div>
     <script src="js/impress.js"></script>
     <script>impress().init();</script>
