@@ -108,6 +108,12 @@ Pizza is delicious and tasty
 ```
 
 ---
+## Use in the wild
+
+* [Ansible: PR 102](https://github.com/grindrllc/ansible/pull/102)
+* [Ansible: PR 109](https://github.com/grindrllc/ansible/pull/109)
+
+---
 ## Thank you!
 
 Don't forget to present pizza to your local ISRE team!
