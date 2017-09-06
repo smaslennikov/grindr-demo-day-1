@@ -1,43 +1,34 @@
 ---
-author: ISRE: Slava Maslennikov
-title: 
+author: ISRE - Slava Maslennikov
+title: Encrypted data in the wild
 ---
-# Markdown Presentation template
+
+## Turn something like
+
+```bash
+---
+private_key: |
+  -----BEGIN RSA PRIVATE KEY-----
+  MIIJKQIBAAKCAgEAtuA1h4HQqj9pkiTjLrK/BAtSulYRoaDiEsBShLTafcYdKyVw
+  60Vg7EvMmQAPKj7IgD4NUmL0gxZ49obDj3IPo0AVDqlfR83FFbnv3CvjhaQGiN3Z
+  UseD0+zsg4SWz0wz4btDDJvz/afbsNwoD0ti3GmMr+a1++vuOMpv3s8xVsdi1lQX
+  getYwggmdF1DHzIAaNmXiD0qs/fsgu11kXHtVbHbDI1kJ3a9h89PYtn2lw4+zetO
+```
 
 ---
-## Fork the repo on github
+## Into this
 
----
-## Enable GitHub pages on your fork
+```bash
+$ANSIBLE_VAULT;1.1;AES256
+61343362336466626337386234333436313833303663666239336566376133316438356265303637
+3132343964393665656437313065623665323734333264350a393637306262363336336662323037
+66356330336238663661326432663365646662636232366266366337366335346164653432396538
+3630613632333939650a373139613831326663346162323063353031343737616437663339653837
+39373465613462313636373833623932666464366664383663656565306230323865303761316464
+```
 
 ---
 ## Edit present.md to your liking
 * examples can be found [here](https://GitHub.com/egonSchiele/mdpress)
 
 ---
-## Install dependencies
-
-for ubuntu:
-
-    make install_dependencies_ubuntu
-
-for gentoo:
-
-    make install_dependencies_gentoo
-
-for OS X (untested):
-
-    gem install mdpress
-
-----
-## Build your .md file and push to your repo
-* `make all` can be used to build all .md files in the repo directory
-* `make open_all` can be used to build all .md files **and** open the resulting presentations in your default browser
-
----
-## If enabled, Travis CI will ensure you built the most recent version before pushing
-
----
-## You can view your newly made presentation both locally and through GitHub pages:
-* Locally by pointing your browser to index.html in the build directory
-* On GitHub pages once you push to GitHub (if you forgot to build with `make all` first, this won't work)

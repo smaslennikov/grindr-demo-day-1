@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Template presentation</title>
+    <title>Encrypted data in the wild</title>
     <link href="css/reset.css" rel="stylesheet" />
-    <meta name="author" content="Slava Maslennikov">
+    <meta name="author" content="ISRE - Slava Maslennikov">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -28,16 +28,25 @@
     <div id="impress">
     <div class='step' >
     
-<h1>Markdown Presentation template</h1>
-</div>
+<h2>Turn something like</h2>
+<pre><code class='prettyprint bash'>---
+private_key: |
+  -----BEGIN RSA PRIVATE KEY-----
+  MIIJKQIBAAKCAgEAtuA1h4HQqj9pkiTjLrK/BAtSulYRoaDiEsBShLTafcYdKyVw
+  60Vg7EvMmQAPKj7IgD4NUmL0gxZ49obDj3IPo0AVDqlfR83FFbnv3CvjhaQGiN3Z
+  UseD0+zsg4SWz0wz4btDDJvz/afbsNwoD0ti3GmMr+a1++vuOMpv3s8xVsdi1lQX
+  getYwggmdF1DHzIAaNmXiD0qs/fsgu11kXHtVbHbDI1kJ3a9h89PYtn2lw4+zetO
+</code></pre></div>
       <div class='step' >
     
-<h2>Fork the repo on github</h2>
-</div>
-      <div class='step' >
-    
-<h2>Enable GitHub pages on your fork</h2>
-</div>
+<h2>Into this</h2>
+<pre><code class='prettyprint bash'>$ANSIBLE_VAULT;1.1;AES256
+61343362336466626337386234333436313833303663666239336566376133316438356265303637
+3132343964393665656437313065623665323734333264350a393637306262363336336662323037
+66356330336238663661326432663365646662636232366266366337366335346164653432396538
+3630613632333939650a373139613831326663346162323063353031343737616437663339653837
+39373465613462313636373833623932666464366664383663656565306230323865303761316464
+</code></pre></div>
       <div class='step' >
     
 <h2>Edit present.md to your liking</h2>
@@ -48,39 +57,6 @@
 </div>
       <div class='step' >
     
-<h2>Install dependencies</h2>
-
-<p>for ubuntu:</p>
-<pre><code class='prettyprint '>make install_dependencies_ubuntu
-</code></pre>
-<p>for gentoo:</p>
-<pre><code class='prettyprint '>make install_dependencies_gentoo
-</code></pre>
-<p>for OS X (untested):</p>
-<pre><code class='prettyprint '>gem install mdpress
-</code></pre></div>
-      <div class='step' >
-    
-<h2>Build your .md file and push to your repo</h2>
-
-<ul>
-<li><code class='inline prettyprint'>make all</code> can be used to build all .md files in the repo directory</li>
-<li><code class='inline prettyprint'>make open_all</code> can be used to build all .md files <strong>and</strong> open the resulting presentations in your default browser</li>
-</ul>
-</div>
-      <div class='step' >
-    
-<h2>If enabled, Travis CI will ensure you built the most recent version before pushing</h2>
-</div>
-      <div class='step' >
-    
-<h2>You can view your newly made presentation both locally and through GitHub pages:</h2>
-
-<ul>
-<li>Locally by pointing your browser to index.html in the build directory</li>
-<li>On GitHub pages once you push to GitHub (if you forgot to build with <code class='inline prettyprint'>make all</code> first, this won&#39;t work)</li>
-</ul>
-
       </div>
     <script src="js/impress.js"></script>
     <script>impress().init();</script>
