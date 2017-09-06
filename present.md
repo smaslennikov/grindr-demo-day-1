@@ -1,6 +1,6 @@
 ---
-author: Slava Maslennikov
-title: Template presentation
+author: ISRE: Slava Maslennikov
+title: 
 ---
 # Markdown Presentation template
 
