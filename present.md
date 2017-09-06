@@ -3,6 +3,8 @@ author: ISRE - Slava Maslennikov
 title: Storing secrets in the wild
 ---
 # Storing secrets in the wild
+## ISRE Team
+## September 6th 2017
 
 ---
 ## Turn something like
